@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}{% if pagination.title == 'Archive' %}Index{%- else %}{{pagination.title|title}}{%- endif %} - {{site.name}}{% endblock %}
+{% block pagetitle %}{% if pagination.title == 'Archive' %}Index{%- else %}{{pagination.title|title}}{%- endif %}{% endblock %}
+
+{% block main %}
+    <div id="main" class="hentry" role="main">
+    {% set year = 0 -%}
+    {% for item in pagination.items %}
+        {%- if item.date.year != year %}
+            {%- if year != 0 -%}
+                                </ul>
+            </section>
+            {%- endif %}
+            {% set year = item.date.year -%}
+            <section class="item">
+                <h2>{{item.date.year}}</h2>
+                <ul>
+        {%- endif %}
+                    <li><a href="{{ item|permalink }}">{{ item.title }}</a> <time class="updated">{{item.date.strftime('%Y-%m-%d')}}</time></li>
+    {% endfor %}
+                </ul>
+            </section>
+    </div><!-- #main -->
+{% endblock %}

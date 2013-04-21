@@ -1,0 +1,339 @@
+/*!
+ * resest.css 
+ */
+body {
+    color: #333;
+    -webkit-text-size-adjust:100%;
+    background: #fff;
+}
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+}
+/** 设置默认字体  font: 14px/1.5 Microsoft YaHei, tahoma, arial, \5b8b\4f53, sans-serif;**/
+body,
+button, input, select, textarea /* for ie */ {
+    font: 14px/1.5 "Georgia","Helvetica Neue", Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+address, cite, dfn, em, var {
+    font-style: normal;
+} /* 将斜体扶正 */
+code, kbd, pre, samp {
+    font-family: courier new, courier, monospace;
+} /* 统一等宽字体 */
+pre {
+    background: #f8f8f8;
+	display: block;
+	overflow-x: auto;
+	margin:0.7em 0em;
+	padding:0.7em 1.2em;
+    margin: 0.7em 0;
+	border: 1px solid #ddd;
+	white-space: pre-wrap;
+}
+code {
+    font-family: Monaco,monospace;
+    font-size: 13px;
+}
+blockquote {
+	display:block;
+	text-align:justify;
+	border-left:4px solid #ddd;
+}
+blockquote {
+	margin:1em 0em;
+	padding-left:1.5em;
+}
+blockquote p {
+	margin:0;
+	padding:0;
+}
+small {
+    font-size: 12px;
+} /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+p {
+	padding:0.5em 0;
+    word-wrap: break-word;
+}
+
+/** 重置列表元素 **/
+ul, ol {
+    list-style: none;
+}
+
+sup {
+    vertical-align: text-top;
+} /* 重置，减少对行高的影响 */
+sub {
+    vertical-align: text-bottom;
+}
+
+/** 重置表单元素 **/
+legend {
+    color: #000;
+} /* for ie6 */
+fieldset, img {
+    border: 0;
+} 
+button, input, select, textarea {
+    font-size: 100%;
+} /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+
+/** 重置表格元素 **/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 清除浮动 */
+.clear:after { content: '\20'; display: block; height: 0; clear: both; }
+.clear { *zoom: 1;}
+
+a {
+	color:#1863A1;
+	text-decoration:none;
+}
+a:hover{
+	color:#0181EB;
+	text-decoration:underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.4em;
+}
+h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+h1 {
+	font-size: 1.5em;
+}
+h2 {
+    padding-top: 1em;
+	font-size: 1.2em;
+    font-weight: normal;
+}
+h3 {
+    font-size: 1em;
+}
+
+/*
+h1 {
+	font-size: 1.8em;
+}
+h2{
+	font-size: 1.6em;
+}
+h3 {
+	font-size: 1.4em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5, h6 {
+	font-size: 1em;
+}*/
+
+
+/*!
+ * layout
+ */
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+#header {
+    width: 780px;
+    float: right;
+    padding: 2em 0 0.5em 0;
+    border-bottom: 1px #ccc solid;
+}
+
+#nav {
+    padding-top: 90px;
+	width: 140px;
+	text-transform:uppercase;
+	float:left;
+    font-size: 1.2em;
+}
+#nav a {
+	display:block;
+	padding:.5em 1em;
+	color:#333;
+}
+#nav a:hover {
+	background-color:#0181EB;
+	text-decoration:none;
+	color:#f9f9f9;
+	-webkit-transition:color .2s linear;
+	-moz-transition:color .2s linear;
+}
+
+
+#main {
+	width: 780px;
+	padding: 1em 0 5em 0;
+	float: right;
+}
+#main ul {
+    padding-bottom: 0.5em;
+    margin-bottom: 0;
+}
+#main ul li time {
+	width: 8em;
+	display: inline-block;
+	float: left;
+	color: #999;
+    font-family: "Galdeano","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+.item ul li {
+	clear: both;
+	padding: 0.2em 0;
+    font-size: 1.14em;
+}
+.item li {
+    list-style: none;
+}
+
+.entry-meta {
+    margin-top: 1em;
+    padding: 0.5em 0;
+    border-top: 1px #e4e4e4 solid;
+    color: #999;
+    font-size: 14px;
+}
+.entry-meta time {
+    margin-right: 20px;
+}
+.entry-meta span {
+    display: inline-block;
+    margin-right: 20px;
+}
+.entry-content {
+    padding-top: 1em;
+}
+.entry-content ul {
+    padding-left: 3em;
+    list-style: square outside;
+}
+.entry-content ul ul {
+    list-style: circle outside;
+    padding-left: 6em;
+}
+.entry-content ol {
+    list-style: decimal outside;
+    padding-left: 3em;
+}
+.entry-content img {
+    width: 100%;
+}
+
+.tagcloud {
+    font-size: 1.14em;
+}
+.tagcloud a {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+#footer {
+	clear: both;
+	/*
+	width: 780px;
+	margin-left: 180px;*/
+	width: 960px;
+	margin: 0 auto;
+	border-top: 1px #ccc solid;
+	color: #999;
+	text-align: center;
+    font-size: 14px;
+}
+
+
+/* desktop */
+@media only screen and (max-width: 959px) {
+	#footer, #nav {
+		width: 100%;
+	}
+    #header {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #main {
+        float: none;
+        width: auto;
+        border-top: 1px #ccc solid;
+    }
+	
+	#nav {
+        padding-top: 0;
+        clear: both;
+        float: none;
+	}
+}
+/* pad */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #wrapper {
+		width: 680px;
+        margin: 0 auto;
+	}
+    #nav {
+        margin-left: -1em;
+        padding: 0.5em 0;
+    }
+	#nav a {
+		display:inline-block;
+	}
+	
+}
+ 
+/* iPhone 及以下 */
+@media only screen and (max-width: 767px) {
+    #wrapper {
+        width: auto;
+    }
+    #header h1 {
+        padding-left: 0.5em;
+    }
+    #main {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+	#main ul li time {
+		display: inline;
+		float: none;
+	}
+	#main ul li a {
+		margin-right: 10px;
+	}
+}
+ 
+/* 仅iPhone 横版，包括某些平板电脑的竖版 */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+ 
+/* 仅iphone4 竖版 */
+@media only screen and (max-width: 479px) {
+	#header-inner {
+        padding-top: 20px;
+        font-size: 14px;
+    }
+    #logo {
+        font-size: 1.5em;
+        margin-left: 20px;
+    }
+}

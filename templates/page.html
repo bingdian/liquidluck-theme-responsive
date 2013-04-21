@@ -1,0 +1,12 @@
+{% extends "post.html" %}
+
+{% block main %}
+<article id="main" class="hentry">
+    {%- if post.description %}
+    <div class="entry-description">{{post.description}}</div>
+    {%- endif %}
+    <div class="entry-content">
+        {{post.content}}
+    </div>
+</article>
+{% endblock %}

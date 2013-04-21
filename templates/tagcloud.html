@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Tags - {{site.name}}{% endblock %}
+{% block pagetitle %}Tags{% endblock %}
+
+{% block main %}
+    <div id="main" role="main">
+        <div class="tagcloud">
+            {% for tag in tags -%}
+            {%- set items = tags[tag] -%}
+            <a href="{{tag}}">{{tag}}<span class="count">({{items|length}})</span></a>
+            {%- endfor %}
+        </div>
+    </div><!-- #main -->
+{% endblock %}

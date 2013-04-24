@@ -29,7 +29,7 @@ Change Navigation (example)
 
 	theme = {
 		'vars': [
-			'nav': [
+			'navigation': [
 				{'name': 'Home', 'link': '/'},
 				{'name': 'Life', 'link': '/life/'},
 			]

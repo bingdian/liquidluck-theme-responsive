@@ -19,7 +19,7 @@ analytics = None
 allow_comment_on_secret_post = False
 
 
-nav = [
+navigation = [
     {'title': 'Home', 'link': '/'},
     {'title': 'About', 'link': '/about.html'},
 ]

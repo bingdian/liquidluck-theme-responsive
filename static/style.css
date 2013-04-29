@@ -1,156 +1,536 @@
-/*!
- * resest.css 
+/**
+ * style for liquidluck-theme-responsive
+ * 
+ * @version 0.1
+ * @author imbingdian@gmail.com
  */
-body {
-    color: #333;
-    -webkit-text-size-adjust:100%;
-    background: #fff;
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
 }
-/** 清除内外边距 **/
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
-dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
-pre, /* text formatting elements 文本格式元素 */
-form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
-th, td /* table elements 表格元素 */ {
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+html {
+    background: #fff;
+    color: #333;
+    /*font: 14px/1.6 "Georgia","Helvetica Neue", Arial, sans-serif;*/
+	font:16px/1.5  "Georgia","Helvetica Neue", Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Remove default margin.
+ */
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements */
+dl, dt, dd, ul, ol, li, /* list elements */
+pre, /* text formatting elements */
+form, fieldset, legend, button, input, textarea, /* form elements */
+th, td /* table elements */ {
     margin: 0;
     padding: 0;
 }
-/** 设置默认字体  font: 14px/1.5 Microsoft YaHei, tahoma, arial, \5b8b\4f53, sans-serif;**/
-body,
-button, input, select, textarea /* for ie */ {
-    font: 14px/1.5 "Georgia","Helvetica Neue", Arial, sans-serif;
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a {
+	color:#1863A1;
+	text-decoration:none;
+	border-bottom: 1px #1863A1 dotted;
 }
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+a:hover{
+	color:#0181EB;
+	text-decoration:none;
+	border-bottom: 1px #0181EB dotted;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
 h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
+    font-weight: bold;
 }
-address, cite, dfn, em, var {
-    font-style: normal;
-} /* 将斜体扶正 */
-code, kbd, pre, samp {
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+	margin: 1.6em 0 1em 0;
+    font-size: 1.6em;
+}
+
+h3 {
+	margin: 1.2em 0 0.8em 0;
+    font-size: 1.2em;
+}
+
+h4, h5, h6 {
+    font-size: 1em;
+}
+
+/**
+ * paragraph
+ */
+p {
+	margin: 0.8em 0;
+}
+
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+ * code 
+ */
+
+code,
+kbd,
+pre,
+samp {
     font-family: courier new, courier, monospace;
-} /* 统一等宽字体 */
+	font-size: 1em;
+}
 pre {
     background: #f8f8f8;
 	display: block;
 	overflow-x: auto;
-	margin:0.7em 0em;
-	padding:0.7em 1.2em;
-    margin: 0.7em 0;
+	padding:0.5em 1em;
+	margin: 0 0 1.5em 0;
 	border: 1px solid #ddd;
 	white-space: pre-wrap;
 }
 code {
     font-family: Monaco,monospace;
-    font-size: 13px;
+    font-size: 12px;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
 }
 blockquote {
 	display:block;
 	text-align:justify;
 	border-left:4px solid #ddd;
-}
-blockquote {
 	margin:1em 0em;
-	padding-left:1.5em;
+	padding-left:1em;
 }
 blockquote p {
 	margin:0;
 	padding:0;
 }
-small {
-    font-size: 12px;
-} /* 小于 12px 的中文很难阅读，让 small 正常化 */
 
-p {
-	padding:0.5em 0;
-    word-wrap: break-word;
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+    font-size: 80%;
 }
 
-/** 重置列表元素 **/
-ul, ol {
-    list-style: none;
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 sup {
-    vertical-align: text-top;
-} /* 重置，减少对行高的影响 */
-sub {
-    vertical-align: text-bottom;
+    top: -0.5em;
 }
 
-/** 重置表单元素 **/
-legend {
-    color: #000;
-} /* for ie6 */
-fieldset, img {
-    border: 0;
-} 
-button, input, select, textarea {
-    font-size: 100%;
-} /* 使得表单元素在 ie 下能继承字体大小 */
-/* 注：optgroup 无法扶正 */
+sub {
+    bottom: -0.25em;
+}
 
-/** 重置表格元素 **/
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+
+img {
+    border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+ul, ol {
+    margin: 0.8em 0 1.2em 0;
+    padding: 0 0 0 2em;
+}
+
+ul ul {
+    margin:0;
+}
+
+ol ol {
+    margin: 0;
+    list-style: upper-roman;
+}
+
+ol ol ol {
+    list-style: upper-alpha;
+}
+
+li {
+    line-height: 1.5em;
+}
+dl {
+	padding-left: 2em;
+}
+dt {
+	font-weight: bold;
+	margin: 0.8 0 0.5em 0;
+}
+dd {
+	text-indent: 1em;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
+	font-size: 12px;
+}
+table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+table tr:nth-child(2n) {
+      background-color: #f8f8f8;
+}
+table tr th {
+	font-weight: bold;
+	border: 1px solid #cccccc;
+	text-align: left;
+	margin: 0;
+	padding: 6px 13px;
+}
+table tr td {
+	border: 1px solid #cccccc;
+	text-align: left;
+	margin: 0;
+	padding: 6px 13px;
+}
+table tr th :first-child, table tr td :first-child {
+	margin-top: 0;
+}
+table tr th :last-child, table tr td :last-child {
+	margin-bottom: 0;
 }
 
-/* 清除浮动 */
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+/*
+ * clear
+ */
 .clear:after { content: '\20'; display: block; height: 0; clear: both; }
 .clear { *zoom: 1;}
 
-a {
-	color:#1863A1;
-	text-decoration:none;
-}
-a:hover{
-	color:#0181EB;
-	text-decoration:underline;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0.4em;
-}
-h2, h3, h4, h5, h6 {
-    font-weight: normal;
-}
-h1 {
-	font-size: 1.5em;
-}
-h2 {
-    padding-top: 1em;
-	font-size: 1.2em;
-    font-weight: normal;
-}
-h3 {
-    font-size: 1em;
-}
-
 /*
-h1 {
-	font-size: 1.8em;
-}
-h2{
-	font-size: 1.6em;
-}
-h3 {
-	font-size: 1.4em;
-}
-h4 {
-	font-size: 1.2em;
-}
-h5, h6 {
-	font-size: 1em;
-}*/
-
-
-/*!
- * layout
+ * wrapper
  */
 #wrapper {
 	width: 960px;
 	margin: 0 auto;
 }
+
+/*
+ * header
+ */
 #header {
     width: 780px;
     float: right;
@@ -158,12 +538,16 @@ h5, h6 {
     border-bottom: 1px #ccc solid;
 }
 
+/*
+ * nav
+ */
 #nav {
-    padding-top: 90px;
 	width: 140px;
+    padding-top: 90px;
+	padding-bottom: 5em;
 	text-transform:uppercase;
 	float:left;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 #nav a {
 	display:block;
@@ -177,39 +561,54 @@ h5, h6 {
 	-webkit-transition:color .2s linear;
 	-moz-transition:color .2s linear;
 }
+#nav a:link, #nav a:visited, #nav a:hover {
+	border-bottom: none;
+}
 
-
+/*
+ * main
+ */
 #main {
 	width: 780px;
-	padding: 1em 0 5em 0;
+	padding: 0 0 5em 0;
 	float: right;
 }
-#main ul {
-    padding-bottom: 0.5em;
-    margin-bottom: 0;
+
+
+.item h2 {
+	margin: 1em 0 0 0;
+	font-size: 1.2em;
 }
-#main ul li time {
+.item ul {
+	margin: 0;
+	padding: 0;
+}
+.item li {
+	clear: both;
+	padding: 0.3em 0;
+    list-style: none;
+}
+.item time {
 	width: 8em;
 	display: inline-block;
 	float: left;
 	color: #999;
     font-family: "Galdeano","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 }
-.item ul li {
-	clear: both;
-	padding: 0.2em 0;
-    font-size: 1.14em;
-}
-.item li {
-    list-style: none;
+.item a:link, .item a:visited, .item a:hover {
+	border: none;
 }
 
+
+.page-hentry {
+	padding-top: 1.5em !important;
+}
 .entry-meta {
     margin-top: 1em;
     padding: 0.5em 0;
     border-top: 1px #e4e4e4 solid;
     color: #999;
-    font-size: 14px;
+    font-size: 0.8em;
 }
 .entry-meta time {
     margin-right: 20px;
@@ -218,40 +617,32 @@ h5, h6 {
     display: inline-block;
     margin-right: 20px;
 }
-.entry-content {
-    padding-top: 1em;
-}
-.entry-content ul {
-    padding-left: 3em;
-    list-style: square outside;
-}
-.entry-content ul ul {
-    list-style: circle outside;
-    padding-left: 6em;
-}
-.entry-content ol {
-    list-style: decimal outside;
-    padding-left: 3em;
-}
+
 .entry-content img {
     width: 100%;
 }
 
+/*
+ * tagcloud
+ */
 .tagcloud {
-    font-size: 1.14em;
+	padding-top: 1.5em;
+    font-size: 1em;
 }
 .tagcloud a {
     display: inline-block;
     margin-right: 20px;
 }
+.tagcloud a:link, .tagcloud a:visited {
+	border: none;
+}
 
-
+/*
+ * footer
+ */
 #footer {
-	clear: both;
-	/*
-	width: 780px;
-	margin-left: 180px;*/
 	width: 960px;
+	clear: both;
 	margin: 0 auto;
 	border-top: 1px #ccc solid;
 	color: #999;
@@ -260,6 +651,9 @@ h5, h6 {
 }
 
 
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
 /* desktop */
 @media only screen and (max-width: 959px) {
 	#footer, #nav {
@@ -280,6 +674,7 @@ h5, h6 {
 	
 	#nav {
         padding-top: 0;
+		padding-bottom: 0;
         clear: both;
         float: none;
 	}
@@ -300,7 +695,7 @@ h5, h6 {
 	
 }
  
-/* iPhone 及以下 */
+/* phone */
 @media only screen and (max-width: 767px) {
     #wrapper {
         width: auto;
@@ -321,12 +716,8 @@ h5, h6 {
 	}
 }
  
-/* 仅iPhone 横版，包括某些平板电脑的竖版 */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
-}
  
-/* 仅iphone4 竖版 */
+/* phone  */
 @media only screen and (max-width: 479px) {
 	#header-inner {
         padding-top: 20px;
@@ -337,3 +728,6 @@ h5, h6 {
         margin-left: 20px;
     }
 }
+
+
+ 

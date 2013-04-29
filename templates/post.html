@@ -10,7 +10,7 @@
 {%- endif %}
 
 {% if post.description %}
-    {%- block description %}{{post.description}}{% endblock %}
+    {%- block description %}{%- if post.description %}{{post.description}}{%- endif %}{% endblock %}
 {% endif %}
 {%- block pagetitle %}{{post.title}}{% endblock %}
 

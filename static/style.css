@@ -94,6 +94,11 @@ a {
 	border-bottom: 1px #1863A1 dotted;
 }
 
+
+a:visited {
+	color: #769;	
+}
+
 a:focus {
     outline: thin dotted;
 }
@@ -600,7 +605,7 @@ table tr th :last-child, table tr td :last-child {
 }
 
 
-.page-hentry {
+.entry-content {
 	padding-top: 1.5em !important;
 }
 .entry-meta {
@@ -619,7 +624,8 @@ table tr th :last-child, table tr td :last-child {
 }
 
 .entry-content img {
-    width: 100%;
+	width: auto;
+    max-width: 100%;
 }
 
 /*

@@ -638,6 +638,12 @@ table tr th :last-child, table tr td :last-child {
 }
 
 /*
+ * disqus
+ */
+#disqus_thread {
+	padding-top: 2em;
+}
+/*
  * footer
  */
 #footer {
@@ -728,6 +734,3 @@ table tr th :last-child, table tr td :last-child {
         margin-left: 20px;
     }
 }
-
-
- 

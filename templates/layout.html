@@ -44,7 +44,7 @@
 
 {%- block nav %}
 <nav id="nav" role="navigation">{% for item in theme.navigation %}
-    <a href="{{ content_url('') }}{{item.link}}">{{item.title}}</a>
+    <a href="{{ content_url('') }}{{item.link}}">{{item.name}}</a>
 {%- endfor %}
 </nav>
 {%- endblock %}

@@ -20,8 +20,8 @@ allow_comment_on_secret_post = False
 
 
 navigation = [
-    {'title': 'Home', 'link': '/'},
-    {'title': 'About', 'link': '/about.html'},
+    {'name': 'Home', 'link': '/'},
+    {'name': 'About', 'link': '/about.html'},
 ]
 
 #: key-value descriptions

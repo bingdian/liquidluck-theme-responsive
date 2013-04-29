@@ -31,7 +31,9 @@
     <link rel="apple-touch-startup-image" href="{{static_url('ipad-landscape@2x.png')}}" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)" />
     <link rel="apple-touch-startup-image" href="{{static_url('iphone5.png')}}" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" />
     {%- endif %}
-    {%- block afterstyle %}{% endblock %}
+    {%- if site.canonical %}
+    <link rel="canonical" href="{% block canonical %}{% endblock %}" />
+    {%- endif %}
     <!--[if lt IE 9]>
     <script src="{{static_url('js/html5shiv.js')}}"></script>
     <![endif]-->

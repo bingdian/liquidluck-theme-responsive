@@ -2,6 +2,7 @@
 
 {% block title %}{% if pagination.title == 'Archive' %}Index{%- else %}{{pagination.title|title}}{%- endif %} - {{site.name}}{% endblock %}
 {% block pagetitle %}{% if pagination.title == 'Archive' %}Index{%- else %}{{pagination.title|title}}{%- endif %}{% endblock %}
+{% block canonical %}{{ content_url(pagination.root, '') }}{% endblock %}
 
 {% block main %}
     <div id="main" class="hentry" role="main">

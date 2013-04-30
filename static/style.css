@@ -580,6 +580,9 @@ table tr th :last-child, table tr td :last-child {
 }
 
 
+.item {
+	clear: both;
+}
 .item h2 {
 	margin: 1em 0 0 0;
 	font-size: 1.2em;
@@ -597,6 +600,8 @@ table tr th :last-child, table tr td :last-child {
 	width: 8em;
 	display: inline-block;
 	float: left;
+	*float: none;
+	*margin-left: 1em;
 	color: #999;
     font-family: "Galdeano","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 }
@@ -606,6 +611,7 @@ table tr th :last-child, table tr td :last-child {
 
 
 .entry-content {
+	margin-bottom: 3em;
 	padding-top: 1.5em !important;
 }
 .entry-meta {

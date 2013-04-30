@@ -1,5 +1,11 @@
 # liquidluck-theme-responsive Theme for Felix Felicis
 
+## Demos
+
+http://wlog.cn/
+
+http://demo-responsive.tshepang.net/
+
 ## Installation
 
 Requires Felix Felicis 3.8+

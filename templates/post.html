@@ -15,7 +15,7 @@
 {% block main -%}
       
 <article id="main" class="hentry"{%if post.review%} itemscope itemtype="http://data-vocabulary.org/Review"{%endif%}>
-    <!-- <h1 class="entry-title">{{post.title}}</h1> -->
+    <div class="post-date">- Posted on <time class="updated" datetime="{{post.date.strftime('%Y-%m-%d')}}" pubdate>{{post.date.strftime('%Y-%m-%d')}}</time></div>
     <div class="entry-content"{%if post.review%} itemprop="description"{%endif%}>
         {{post.content}}
     </div>

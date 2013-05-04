@@ -20,7 +20,7 @@
         {{post.content}}
     </div>
     <div class="entry-meta">
-        Posted in<time class="updated" datetime="{{post.date|xmldatetime}}"{%if post.review%} itemprop="dtreviewed"{%endif%} pubdate>
+        Posted on<time class="updated" datetime="{{post.date|xmldatetime}}"{%if post.review%} itemprop="dtreviewed"{%endif%} pubdate>
             {{post.date.strftime('%Y-%m-%d')}}
         </time>
 		{%- if post.category %}

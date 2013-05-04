@@ -23,8 +23,10 @@
         Posted in<time class="updated" datetime="{{post.date|xmldatetime}}"{%if post.review%} itemprop="dtreviewed"{%endif%} pubdate>
             {{post.date.strftime('%Y-%m-%d')}}
         </time>
-        <span class="entry-tags">Category:<a href="{{ content_url('', post.category, 'index.html') }}">{{post.category}}</a></span>
-        {%- if post.tags %}
+		{%- if post.category %}
+        <span class="entry-category">Category:<a href="{{ content_url('', post.category, 'index.html') }}">{{post.category}}</a></span>
+		{%- endif %}
+		{%- if post.tags %}
         <span class="entry-tags">Tags:
             {% for tag in post.tags %}
                 {% if loop.index != 1 %},{%- endif %}<a href="{{ content_url('tag', tag, 'index.html') }}">{{tag}}</a>

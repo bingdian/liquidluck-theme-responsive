@@ -14,7 +14,7 @@ Requires Felix Felicis 3.8+
 
 Git clone this repo, and place it in your blog:
 
-	git clone https://github.com/lepture/liquidluck-theme-responsive.git _themes/responsive
+	git clone https://github.com/bingdian/liquidluck-theme-responsive.git _themes/responsive
 
 	your_blog/
     	settings.py
